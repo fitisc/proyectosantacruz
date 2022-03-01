@@ -2,27 +2,27 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <header>
-    <h1>HAPPY HIPPO</h1>
-    <h2>Tienda de Ropa de 0 a 10 años</h2>
-    <nav>
+
+    <nav className='nav'>
         <ul>
             <li>
-                <a href="#">INICIO</a>
+                <a href="#" className='nav__link'>INICIO</a>
             </li>
             <li>
-                <a href="#">PRODUCTOS</a>
+                <a href="#" className='nav__link'>PRODUCTOS</a>
             </li>
             <li>
-                <a href="#">OFERTAS</a>
+                <a href="#" className='nav__link'>OFERTAS</a>
             </li>
+            <span className="material-icons">shopping_cart</span>
             <li>
-                <a href="#">CONTACTO</a>
+                <a href="#" className='nav__link'>CONTACTO</a>
             </li>
+            
         </ul>
     </nav>
 
-</header>
+
 
   )
 }

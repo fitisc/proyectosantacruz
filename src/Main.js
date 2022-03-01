@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Main = () => {
+const Main = (props) => {
+  console.log(props.nombre)
+  
   return (
     <main>
-        <div>
-            <h2>Presentacion de productos</h2>
-            <img src="#" alt="cards con imagenes" />
-            <img src="#" alt="cards con imagenes" />
-            <img src="#" alt="cards con imagenes" />
-        </div>
+      <h3>PRODUCTOS DESTACADOS {props.nombre}</h3>
+      <img src="#" alt="cards con imagenes" />
+      <img src="#" alt="cards con imagenes" />
+      <img src="#" alt="cards con imagenes" />
     </main>
   )
 }

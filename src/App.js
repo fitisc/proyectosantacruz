@@ -7,7 +7,9 @@
 //rafce:
 import React from 'react'
 
+import Header from "./Header"
 import Navbar from './Componentes/Navbar'
+import ItemListContainer from './Componentes/ItemListContainer'
 import Main from './Main'
 import Footer from './Footer'
 
@@ -15,8 +17,10 @@ import Footer from './Footer'
 const App = () => {
   return (
     <>
-        <Navbar />
-        <Main />
+        <Header />
+        <Navbar/>
+        <ItemListContainer saludo= "nuestra tienda online"/>
+        <Main nombre= "HAPPY HIPPO" />
         <Footer/>
     </>
   )
