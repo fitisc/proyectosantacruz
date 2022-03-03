@@ -48,7 +48,7 @@ nav ul{
     font-size: 2rem;
     text-align: center;
     text-shadow: 2px 2px rgb(65, 56, 73);
-    transform: rotateX(10deg);
+   
 }
 
 main{
@@ -61,4 +61,22 @@ footer{
     background-color: aquamarine;
     text-align: end;
     font-size: 0.8rem;
+}
+
+.btnSumar{
+    background-color: rgb(233, 208, 208);
+    width: 15%;
+
+}
+
+.btnRestar{
+    background-color: rgb(233, 208, 208);
+    width: 15%;
+
+}
+
+.btnReset{
+    background-color: rgb(177, 145, 145);
+    width: 20%;
+
 }
