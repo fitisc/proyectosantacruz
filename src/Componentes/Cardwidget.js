@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cardwidget = () => {
+const CardWidget = () => {
   return (
     <div>
         <span className="material-icons">shopping_cart</span>
@@ -8,4 +8,4 @@ const Cardwidget = () => {
   )
 }
 
-export default Cardwidget
+export default CardWidget

@@ -1,5 +1,5 @@
 import React from 'react'
-import Cardwidget from './Cardwidget'
+import CardWidget from './CardWidget'
 
 const Navbar = () => {
   return (
@@ -18,8 +18,9 @@ const Navbar = () => {
             <li>
                 <a href="#" className='nav__link'>CONTACTO</a>
             </li>
-            <Cardwidget /> 
+            <CardWidget /> 
         </ul>
+        
     </nav>
 
 

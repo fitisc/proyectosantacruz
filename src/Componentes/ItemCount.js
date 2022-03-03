@@ -1,15 +1,17 @@
 import React from 'react'
 import {useState} from "react"
 
-const ItemCount = () => {
+const ItemCount = (props) => {
 
-    const inicial = 1
-    const stock = 10
+  //const Contador = ({initial, stock}) => {
+    let [estado, setEstado] = useState(props.initial, props.stock)
+  
 
-    const [estado, setEstado] = useState(inicial)
+   
+//const [estado, setEstado] = useState(inicial)
 
   const handelSumar = () => {
-    if(estado < stock){
+    if(estado < 5){
     setEstado(estado + 1)
   }
 }
@@ -23,12 +25,17 @@ const ItemCount = () => {
   const handelResetear = () => {
     setEstado(1)
   }
+
+  const onAdd = () => {
+console.log(estado)
+  }
   return (
     <div>
-        <p>Mi contador va: {estado}</p>
+        <p initial={1} stock={5}>Mi contador va: {estado}</p>
       <button className="btnSumar" onClick={handelSumar} > + </button>
       <button className='btnReset' onClick={handelResetear}>RESET</button>
       <button className="btnRestar"onClick={handelRestar}> - </button><br />
+      <button className='btnAgregar' onClick={onAdd}>Agregar a Carrito</button>
       
       
     </div>

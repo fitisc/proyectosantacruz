@@ -65,18 +65,24 @@ footer{
 
 .btnSumar{
     background-color: rgb(233, 208, 208);
-    width: 15%;
+    width: 10%;
 
 }
 
 .btnRestar{
     background-color: rgb(233, 208, 208);
-    width: 15%;
+    width: 10%;
 
 }
 
 .btnReset{
     background-color: rgb(177, 145, 145);
-    width: 20%;
+    width: 15%;
 
+}
+
+.btnAgregar{
+    background-color: blanchedalmond;
+    width: 35%;
+    
 }
