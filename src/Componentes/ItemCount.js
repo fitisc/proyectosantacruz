@@ -4,14 +4,14 @@ import {useState} from "react"
 const ItemCount = (props) => {
 
   //const Contador = ({initial, stock}) => {
-    let [estado, setEstado] = useState(props.initial, props.stock)
+    let [estado, setEstado] = useState(props.initial)
   
 
-   
+  
 //const [estado, setEstado] = useState(inicial)
 
   const handelSumar = () => {
-    if(estado < 5){
+    if(estado < props.stock){
     setEstado(estado + 1)
   }
 }
@@ -31,7 +31,7 @@ console.log(estado)
   }
   return (
     <div>
-        <p initial={1} stock={5}>Mi contador va: {estado}</p>
+        <p>Mi contador va: {estado}</p>
       <button className="btnSumar" onClick={handelSumar} > + </button>
       <button className='btnReset' onClick={handelResetear}>RESET</button>
       <button className="btnRestar"onClick={handelRestar}> - </button><br />
