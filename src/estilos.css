@@ -31,7 +31,7 @@ background-color: aquamarine;
 box-shadow: 0 2px 4px grey;
 }
 
-nav ul{
+nav{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

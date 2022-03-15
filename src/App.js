@@ -19,13 +19,11 @@ import { BrowserRouter } from 'react-router-dom'
 const App = () => {
   return (
     <BrowserRouter>
-    <>
         <Header />
-        <Navbar/>  
+        <Navbar />  
         <Main nombre= "HAPPY HIPPO" />
-        <Footer/>
-        <ToastContainer/>
-    </>
+        <Footer />
+        <ToastContainer />
     </BrowserRouter>
   )
 }

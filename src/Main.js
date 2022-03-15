@@ -8,7 +8,7 @@ import ItemListContainer from './Componentes/ItemListContainer'
 const Main = (props) => {
   return( 
     <main>
-      <h2 className='saludoInicial'>¡Bienvenidos a  {props.saludo}!</h2>
+      <h2 className='saludoInicial'>¡Bienvenidos a  {props.nombre}!</h2>
       <ItemListContainer saludo= "nuestra tienda online"/>
       
      
