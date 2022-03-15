@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import { toast } from 'react-toastify';
 import productos from '../database/productos'
 import ItemList from './ItemList';
 
@@ -12,26 +13,30 @@ function getDatos() {
 
 
 function ItemListContainer(props) {
+  const [loading, setLoading] = useState(true)
   const [items, setItems] = useState([]);
 
   useEffect(() => {
+    toast.info("Trayendo productos...")
     getDatos()
       .then(respuestaPromise => setItems(respuestaPromise))
-      setItems(items)
-     .catch( error => console.error(error));
+     // toast.dismiss("")
+      //setItems(respuestaPromise)
+     .catch((error) => {
+       toast.error("Error al cargar los productos...")
+     })
+     .finally(()=>{
+       setLoading(false)
+     })
+
   }, []);
 
-  console.log(productos)
+  if(loading){
+    return <h1>Cargando...</h1>
+  }else{
+    return <ItemList item={items}/>
 
-  return (
-    <>
-    <h2 className='saludoInicial'>¡Bienvenidos a  {props.saludo}!</h2>
-    <ItemList item={items} />
-    </>
-
-
-
-  );
+}
 }
 
 export default ItemListContainer

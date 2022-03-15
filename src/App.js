@@ -11,8 +11,8 @@ import Navbar from './Componentes/Navbar'
 import Main from './Main'
 //import ItemListContainer from './Componentes/ItemListContainer'
 import Footer from './Footer'
-//import {ToastContainer} from "react-toastify"
-//import "react-toastify/dist/ReactToastify.css";
+import {ToastContainer} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter } from 'react-router-dom'
 
 
@@ -23,8 +23,8 @@ const App = () => {
         <Header />
         <Navbar/>  
         <Main nombre= "HAPPY HIPPO" />
-        
         <Footer/>
+        <ToastContainer/>
     </>
     </BrowserRouter>
   )

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 
+
 let producto = {
     "id": 1,
     "title": "Remera Timon",
@@ -34,8 +35,10 @@ const ItemDetailContainer = () => {
     }, [])
     
   return (
+      <>
       <ItemDetail producto={productos}/>
-    
+
+    </>
   )
 }
 
