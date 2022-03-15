@@ -4,11 +4,11 @@ import ItemDetail from './ItemDetail'
 
 let producto = {
     "id": 1,
-    "title": "Remera Timon",
-    "description": "Remera de algodon color rojo con dibujo de timón blanco, cuello a la base, manga corta",
+    "title": "Blusa Mundo",
+    "description": "Blusa de algodón, con vuelos en mangas y cintura, cuello a la base",
     "price": 1200,
-    "category": "Remeras",
-    "imageUrl": "./public/img/blusamundo.png",
+    "category": "Blusas",
+    "imageUrl": "/img2/blusamundo2.png",
     "stock": 6
   }
 
