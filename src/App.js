@@ -6,24 +6,27 @@
 
 //rafce:
 import React from 'react'
-
 import Header from "./Header"
 import Navbar from './Componentes/Navbar'
-
-import ItemListContainer from './Componentes/ItemListContainer'
 import Main from './Main'
+//import ItemListContainer from './Componentes/ItemListContainer'
 import Footer from './Footer'
+//import {ToastContainer} from "react-toastify"
+//import "react-toastify/dist/ReactToastify.css";
+import { BrowserRouter } from 'react-router-dom'
 
 
 const App = () => {
   return (
+    <BrowserRouter>
     <>
         <Header />
-        <Navbar/>
-        <ItemListContainer saludo= "nuestra tienda online"/>
+        <Navbar/>  
         <Main nombre= "HAPPY HIPPO" />
+        
         <Footer/>
     </>
+    </BrowserRouter>
   )
 }
 

@@ -96,3 +96,23 @@ main{
     width: 35%;
     
 }
+
+.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.articles{
+    background-color: bisque;
+    padding: 3px;
+    margin: 10px;
+    width: 30vw;
+    height: 50vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px grey;
+   
+}

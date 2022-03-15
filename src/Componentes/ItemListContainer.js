@@ -18,7 +18,7 @@ function ItemListContainer(props) {
     getDatos()
       .then(respuestaPromise => setItems(respuestaPromise))
       setItems(items)
-    //.catch( error => console.error(error));
+     .catch( error => console.error(error));
   }, []);
 
   console.log(productos)

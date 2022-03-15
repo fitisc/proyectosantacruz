@@ -3,18 +3,11 @@ import Item from "./Item"
 
 function ItemList({item}) {
     return (
-        <section>
-             {item.map(item =>{
-                return(
-                    <div>
-                        <Item key={item.id}
-                        item={item}
-                       
-                        />
-                    </div>
-                )
+        <section className='productos'>
+             {item.map((item) => {
+                return <Item key={item.id}
+                        item={item} />
             })}
-          
         </section>
     )
 }
