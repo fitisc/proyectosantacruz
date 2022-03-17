@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import ItemDetail from './ItemDetail'
 
 
@@ -15,13 +17,16 @@ let producto = {
 const ItemDetailContainer = () => {
 
     
-    const [productos, setProductos] = useState({})
+    const [producto, setProductos] = useState({})
+    const idProducto = useParams()
+    
 
     useEffect(() => {
       const pedido = new Promise((res,rej) => {
           setTimeout(() =>{
               res(producto)
           }, 2000)
+          console.log(idProducto)
       })
       pedido
       .then((resultado)=>{
@@ -30,13 +35,14 @@ const ItemDetailContainer = () => {
       })
       .catch((error)=>{
           console.log("Algo salió mal")
+          toast.error("Algo salió mal")
       })
       
-    }, [])
+    }, [idProducto])
     
   return (
       <>
-      <ItemDetail producto={productos}/>
+      <ItemDetail producto={producto}/>
 
     </>
   )

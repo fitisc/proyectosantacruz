@@ -1,22 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import CardWidget from './CardWidget'
 
 const Navbar = () => {
   return (
 
     <nav className='nav'>
-                <Link to="#" className='nav__link'>INICIO</Link>
+                <NavLink to="/categoria/1" className='nav__link'>INICIO</NavLink>
             
     
-                <Link to="#" className='nav__link'>PRODUCTOS</Link>
+                <NavLink to="/categoria/remeras" className='nav__link'>REMERAS</NavLink>
     
-                <Link to="#" className='nav__link'>OFERTAS</Link>
+                <NavLink to="/categoria/pantalones" className='nav__link'>PANTALONES</NavLink>
         
-                <Link to="#" className='nav__link'>CONTACTO</Link>
-            <CardWidget /> 
+                <NavLink to="/categoria/buzosycamperas" className='nav__link'>BUZOS/CAMPERAS</NavLink>
+                <CardWidget /> 
         
     </nav>
+    
 
 
 

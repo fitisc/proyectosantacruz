@@ -10,42 +10,42 @@ const productos = [{
     "stock": 1
   }, {
     "id": 2,
-    "title": "Pantalon",
-    "description": "Reposition Right Rib, Open Approach",
-    "price": 2.86,
-    "category": "Hills, Bechtelar and Heaney",
+    "title": "jogging",
+    "description": "",
+    "price": 1800,
+    "category": "pantalones/Jeans",
     "imageUrl": "#c5f314",
-    "stock": 2
+    "stock": 4
   }, {
     "id": 3,
-    "title": "Buzo",
-    "description": "Extirpation of Matter from Sternum, Open Approach",
-    "price": 9.47,
-    "category": "Thiel-Howell",
+    "title": "Buzo cangurito",
+    "description": "",
+    "price": 2500,
+    "category": "Buzos/Camperas",
     "imageUrl": "#2867ea",
     "stock": 3
   }, {
     "id": 4,
-    "title": "Campera",
+    "title": "Campera rompeviento",
     "description": "Alteration of Left Buttock with Nonaut Sub, Perc Approach",
-    "price": 5.06,
-    "category": "Quitzon-Barton",
+    "price": 3500,
+    "category": "Buzos/camperas",
     "imageUrl": "#8130fb",
     "stock": 4
   }, {
     "id": 5,
-    "title": "Volvo",
+    "title": "Buzo capucha",
     "description": "Caregiver Train in Applic/Use/Care Orthoses using Orthosis",
-    "price": 7.17,
-    "category": "Ratke LLC",
+    "price": 2500,
+    "category": "Buzos/Camperas",
     "imageUrl": "#f31e32",
     "stock": 5
   }, {
     "id": 6,
-    "title": "Pontiac",
+    "title": "Short",
     "description": "Dilate L Ext Iliac Art, Bifurc, w Drug-elut Intra, Perc",
-    "price": 8.17,
-    "category": "Farrell-Maggio",
+    "price": 1500,
+    "category": "Pantalones/Jeans",
     "imageUrl": "#a3880e",
     "stock": 6
   }]
