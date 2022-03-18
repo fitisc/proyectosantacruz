@@ -10,7 +10,7 @@ const productos = [{
     "stock": 1
   }, {
     "id": 2,
-    "title": "jogging",
+    "title": "Jogging",
     "description": "",
     "price": 1800,
     "category": "pantalones/Jeans",
@@ -19,7 +19,7 @@ const productos = [{
   }, {
     "id": 3,
     "title": "Buzo cangurito",
-    "description": "",
+    "description": "Buzo con cierre y capucha color verde",
     "price": 2500,
     "category": "Buzos/Camperas",
     "imageUrl": "/img2/buzocanguro.png",
@@ -27,7 +27,7 @@ const productos = [{
   }, {
     "id": 4,
     "title": "Campera rompeviento",
-    "description": "Alteration of Left Buttock with Nonaut Sub, Perc Approach",
+    "description": "Campera color verde con diseño, forrada",
     "price": 3500,
     "category": "Buzos/camperas",
     "imageUrl": "/img2/camperaverde.png",
@@ -35,7 +35,7 @@ const productos = [{
   }, {
     "id": 5,
     "title": "Buzo capucha",
-    "description": "Caregiver Train in Applic/Use/Care Orthoses using Orthosis",
+    "description": "Buzo de frizza, con cierre y capucha",
     "price": 2500,
     "category": "Buzos/Camperas",
     "imageUrl": "/img2/canguroazul.png",

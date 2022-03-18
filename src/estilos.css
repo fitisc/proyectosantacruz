@@ -51,6 +51,16 @@ nav{
    
 }
 
+.tituloProductos{
+    color: rgb(38, 30, 44);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: left;
+    text-shadow: 2px 2px rgb(142, 130, 151);
+   
+}
+
 main{
     flex-grow: 1;
     padding: 1rem;
@@ -103,23 +113,24 @@ main{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-   
+    
 }
 
 .productos .articles{
     background-color: rgb(250, 235, 216);
     padding: 3px;
     margin: 10px;
-    width: 40vw;
-    height: 70vh;
+    width: 30vw;
+    height: 60vh;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px grey;
     transition: all 0.3 ease;
-    cursor: pointer;
+    
 
 }
 
 .articles:hover{
+    
     transform: scale(1,1);
     box-shadow: 0px 0px 10px 5px rgb(100, 93, 93);
     
@@ -128,8 +139,34 @@ main{
     width: 50%;
     height: 50%;
     object-fit: cover;
+   
+    padding: 5px;
     margin: 5px 3px;
    
 
 }
 
+button{
+    background-color:rgb(167, 167, 218);
+    font-weight: 600;
+}
+
+.articles2{
+    background-color: rgb(250, 235, 216);
+   
+    height: 40%;
+    width: 60%;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px grey;
+    padding: 25px;
+   
+}
+
+.articles2 img{
+    width: 60%;
+    height: 40%;
+    object-fit: cover;
+   
+    padding: 5px;
+    margin: 5px 3px;
+}

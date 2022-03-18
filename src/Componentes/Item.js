@@ -7,7 +7,8 @@ export default function ItemList({item}) {
             <h2>{item.title}</h2>
             <img src= {item.imageUrl} />
             <h3> Precio: ${item.price}</h3>
-            <Link to= {`/item/${item.id}`}>Ver detalle</Link>
+            <button>
+            <Link to= {`/item/${item.id}`}>Ver detalle</Link></button>
         </article>
     )
 }

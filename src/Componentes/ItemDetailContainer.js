@@ -4,10 +4,13 @@ import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import ItemDetail from './ItemDetail'
 
-function getDatos() {
+function getDatos(idItem) {
   return new Promise((resolve, reject) =>{
     setTimeout(function(){
-      resolve(productos);
+      let itemNew = productos.find(function(itemIterado){
+        return (itemIterado.id === Number(idItem))
+      });
+      resolve(itemNew);
     },2000);
   });
 }
@@ -17,15 +20,14 @@ const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({});
     const [loading, setLoading] = useState(true);
-    const {idProducto} = useParams()
+    const {idItem} = useParams()
     
     useEffect(() => {
-      console.log(idProducto)
+      console.log(idItem)
   
-      getDatos()
+      getDatos(idItem)
         .then(respuestaPromise => setItem(respuestaPromise))
-       
-        //setItems(respuestaPromise)
+        //setItem(respuestaPromise)
        .catch((error) => {
          toast.error("Error al cargar los productos...")
        })
@@ -33,7 +35,7 @@ const ItemDetailContainer = () => {
          setLoading(false)
        })
   
-    }, [idProducto]);
+    }, [idItem]);
     
     
     if(loading){
