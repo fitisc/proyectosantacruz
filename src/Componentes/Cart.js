@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
   return (
-    <button>
-        <Link to="">Terminar compra</Link>
-     </button>
+    <div>
+      Carrito...
+    </div>
   )
 }
 

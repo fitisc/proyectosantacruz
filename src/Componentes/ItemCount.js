@@ -27,7 +27,8 @@ const ItemCount = (props) => {
   }
 
   const onAdd = () => {
-console.log("Agregar" + estado)
+    setEstado(onAdd)
+//console.log("Agregar" + estado)
   }
   return (
     <div>
@@ -35,7 +36,7 @@ console.log("Agregar" + estado)
       <button className="btnSumar" onClick={handelSumar} > + </button>
       <button className='btnReset' onClick={handelResetear}>RESET</button>
       <button className="btnRestar"onClick={handelRestar}> - </button><br />
-      <button className='btnAgregar' onClick={onAdd}>Agregar a Carrito</button>
+      <button className='btnAgregar' disable={estado && 0} onClick={()=>props.onAdd(estado)}>Agregar a Carrito</button>
       
       
     </div>

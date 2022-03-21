@@ -170,3 +170,10 @@ button{
     padding: 5px;
     margin: 5px 3px;
 }
+
+.btn-comprar{
+    background-color: rgb(59, 114, 59);
+    width: 50%;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
