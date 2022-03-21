@@ -10,8 +10,9 @@ const ItemDetail = ({item}) => {
 
   const onAdd = (estado) => {
     setEstado(estado);
-    //navigate("/cart")
-    
+      //setTimeout(() => {
+      //navigate("/cart");
+      //}, 3000);
     console.log("Añadir a carrito", estado)
   }
 
