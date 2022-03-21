@@ -4,25 +4,34 @@ import productos from '../database/productos'
 import ItemList from './ItemList';
 import {useParams} from "react-router-dom"
 
-function getDatos() {
+function getDatos(categoryid) {
   return new Promise((resolve, reject) =>{
     setTimeout(function(){
-      resolve(productos);
-    },2000);
-  });
-}
+      //console.log(categoryid);
+      if(!categoryid){
+        resolve(productos);
+      }
+      else{
+        let prendas = productos.filter( item => item.category === categoryid);
+        resolve(prendas);
+      }
+      
+        }, 500);
+       });
+        
+  }
 
 
 function ItemListContainer(props) {
   const [loading, setLoading] = useState(true)
   const [items, setItems] = useState([]);
-  const idCategoria = useParams()
+  const {categoryid} = useParams()
   
   useEffect(() => {
     toast.info("Trayendo productos...")
-    console.log(idCategoria)
+    //console.log(categoryid)
 
-    getDatos()
+    getDatos(categoryid)
       .then(respuestaPromise => setItems(respuestaPromise))
      // toast.dismiss("")
       //setItems(respuestaPromise)
@@ -33,7 +42,7 @@ function ItemListContainer(props) {
        setLoading(false)
      })
 
-  }, [idCategoria]);
+  }, [categoryid]);
 
   if(loading){
     return <h1>Cargando...</h1>

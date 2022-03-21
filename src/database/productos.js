@@ -13,7 +13,7 @@ const productos = [{
     "title": "Jogging",
     "description": "",
     "price": 1800,
-    "category": "pantalones/Jeans",
+    "category": "Pantalones",
     "imageUrl":"/img2/jogginsport.png",
     "stock": 4
   }, {
@@ -21,7 +21,7 @@ const productos = [{
     "title": "Buzo cangurito",
     "description": "Buzo con cierre y capucha color verde",
     "price": 2500,
-    "category": "Buzos/Camperas",
+    "category": "Buzos-Camperas",
     "imageUrl": "/img2/buzocanguro.png",
     "stock": 3
   }, {
@@ -29,7 +29,7 @@ const productos = [{
     "title": "Campera rompeviento",
     "description": "Campera color verde con diseño, forrada",
     "price": 3500,
-    "category": "Buzos/camperas",
+    "category": "Buzos-Camperas",
     "imageUrl": "/img2/camperaverde.png",
     "stock": 4
   }, {
@@ -37,7 +37,7 @@ const productos = [{
     "title": "Buzo capucha",
     "description": "Buzo de frizza, con cierre y capucha",
     "price": 2500,
-    "category": "Buzos/Camperas",
+    "category": "Buzos-Camperas",
     "imageUrl": "/img2/canguroazul.png",
     "stock": 5
   }, {

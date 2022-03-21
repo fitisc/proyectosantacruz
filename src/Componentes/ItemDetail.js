@@ -1,8 +1,17 @@
 import React from 'react'
+
 import ItemCount from "./ItemCount"
+import Cart from './Cart'
 
 
 const ItemDetail = ({item}) => {
+
+
+  const onAdd = (cantidad) => {
+    
+    console.log("Añadir a carrito", cantidad)
+  }
+
   return (
     <div>
         <article className='articles2'>
@@ -12,7 +21,9 @@ const ItemDetail = ({item}) => {
           <p>Descripción: "{item.description}"</p>
           <h5>Categoria: {item.category}</h5>
           <h5>Stock disponible: {item.stock}</h5>
-          <ItemCount initial={1} stock={item.stock} />
+          <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />
+          <Cart />
+          
             
         </article>
     </div>

@@ -27,7 +27,7 @@ const ItemCount = (props) => {
   }
 
   const onAdd = () => {
-console.log(estado)
+console.log("Agregar" + estado)
   }
   return (
     <div>

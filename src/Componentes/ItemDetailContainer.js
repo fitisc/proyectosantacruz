@@ -11,7 +11,7 @@ function getDatos(idItem) {
         return (itemIterado.id === Number(idItem))
       });
       resolve(itemNew);
-    },2000);
+    },500);
   });
 }
 //let producto =
@@ -23,8 +23,7 @@ const ItemDetailContainer = () => {
     const {idItem} = useParams()
     
     useEffect(() => {
-      console.log(idItem)
-  
+      //console.log(idItem)
       getDatos(idItem)
         .then(respuestaPromise => setItem(respuestaPromise))
         //setItem(respuestaPromise)
