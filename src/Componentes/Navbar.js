@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom'
 import CardWidget from './CardWidget'
 
 const Navbar = () => {
+
+  //const {cantidad} = useContext(contexto)
+
   return (
 
     <nav className='nav'>
@@ -14,6 +17,7 @@ const Navbar = () => {
         
                 <NavLink className='nav__link' to="/category/Buzos-Camperas">BUZOS/CAMPERAS</NavLink>
                 <CardWidget /> 
+                
         
     </nav>
     

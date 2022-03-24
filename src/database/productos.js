@@ -7,7 +7,7 @@ const productos = [{
     "price": 1200,
     "category": "Remeras",
     "imageUrl": "/img2/remeratimon.png",
-    "stock": 1
+    "stock": 5
   }, {
     "id": 2,
     "title": "Jogging",

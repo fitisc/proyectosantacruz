@@ -4,39 +4,43 @@ import {useState} from "react"
 const ItemCount = (props) => {
 
   //const Contador = ({initial, stock}) => {
-    let [estado, setEstado] = useState(props.initial)
+    let [cantidad, setCantidad] = useState(props.initial)
   
 
   
 //const [estado, setEstado] = useState(inicial)
 
   const handelSumar = () => {
-    if(estado < props.stock){
-    setEstado(estado + 1)
+    if(cantidad < props.stock){
+    setCantidad(cantidad + 1)
   }
 }
 
   const handelRestar = () => {
-      if(estado > 1){
-    setEstado(estado - 1)
+      if(cantidad > 1){
+    setCantidad(cantidad - 1)
   }
 }
 
   const handelResetear = () => {
-    setEstado(1)
+    setCantidad(1)
   }
 
   const onAdd = () => {
-    setEstado(onAdd)
-//console.log("Agregar" + estado)
+    setCantidad(onAdd)
+    console.log("Agregar" + cantidad)
   }
+
   return (
     <div>
-        <p>Mi contador va: {estado}</p>
+        <p>Mi contador va: {cantidad}</p>
       <button className="btnSumar" onClick={handelSumar} > + </button>
       <button className='btnReset' onClick={handelResetear}>RESET</button>
-      <button className="btnRestar"onClick={handelRestar}> - </button><br />
-      <button className='btnAgregar' disable={estado && 0} onClick={()=>props.onAdd(estado)}>Agregar a Carrito</button>
+      <button className="btnRestar" onClick={handelRestar}> - </button><br />
+      <button className='btnAgregar' 
+        //disable={estado > stock || estado === 0} 
+        onClick={()=>props.onAdd(cantidad)}>Confirmar compra
+      </button>
       
       
     </div>

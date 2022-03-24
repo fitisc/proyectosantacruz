@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 
 
 const Header = () => {
+
+  
   return (
     <header id='layouth-header' className=''>
     <h1 className='header__title'>HAPPY HIPPO</h1>

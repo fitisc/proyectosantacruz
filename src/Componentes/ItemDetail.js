@@ -1,20 +1,29 @@
-import React, { useState } from 'react'
-
+import React, { useState, useContext } from 'react' 
 import ItemCount from "./ItemCount"
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { contexto } from "./Context/CartContext"
 
 const ItemDetail = ({item}) => {
-  const [estado, setEstado] = useState(0)
+  const { addToCart, vaciarCarrito } = useContext(contexto);
+
+  const [cantidad, setCantidad] = useState(0)
   //let navigate = useNavigate();
 
-  const onAdd = (estado) => {
-    setEstado(estado);
+  const onAdd = (cantidad) => {
+    setCantidad(cantidad);
+    addToCart(item, cantidad);
+    
+    //vaciarCarrito()
       //setTimeout(() => {
       //navigate("/cart");
       //}, 3000);
-    console.log("Añadir a carrito", estado)
+    //console.log("Añadir a carrito", cantidad)
+
+    
+    addToCart(item, cantidad);
   }
+  
 
   return (
     <div>
@@ -25,13 +34,13 @@ const ItemDetail = ({item}) => {
           <p>Descripción: "{item.description}"</p>
           <h5>Categoria: {item.category}</h5>
           <h5>Stock disponible: {item.stock}</h5>
-          { estado === 0 ? 
+          { cantidad === 0 ? 
             <ItemCount initial={1} stock={item.stock} onAdd={onAdd} /> 
             : 
             <button className='btn-comprar'>
-            <Link to="/cart">Terminar compra</Link>
-            </button>
-          }
+            <Link to="/carrito">Ir a Carrito</Link>
+            </button> 
+          } 
           
           
           

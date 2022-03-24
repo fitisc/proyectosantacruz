@@ -14,17 +14,22 @@ import Footer from './Footer'
 import {ToastContainer} from "react-toastify"
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter } from 'react-router-dom'
+import MiProvider from './Componentes/Context/CartContext'
+
 
 
 const App = () => {
   return (
     <BrowserRouter>
+      <MiProvider>
         <Header />
         <Navbar />  
         <Main nombre= "HAPPY HIPPO" />
+      </MiProvider>
         <Footer />
         <ToastContainer />
     </BrowserRouter>
+    
   )
 }
 
