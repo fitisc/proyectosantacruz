@@ -45,12 +45,11 @@ function ItemListContainer(props) {
 
   }, [categoryid]);
 
-  if(loading){
-    return <h1>Cargando...</h1>
-  }else{
-    return <ItemList item={items}/>
-
-}
-}
-
+  
+    return ( 
+    <>
+      { loading ? <h1>Cargando...</h1> : <ItemList item={items} /> }
+    </>
+    )
+    }
 export default ItemListContainer

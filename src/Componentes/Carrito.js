@@ -15,22 +15,32 @@ console.log(carrito)
   return (
     <>
       {carrito.length === 0 ? (
-        <><h1 className="avisoCarrito">Aun no tenes productos</h1>
-        <Link to="/" className="home1"> Ir a Home</Link></>
+        <><h1 className="avisoCarrito">¡Aun no tenes productos!</h1>
+        <Link to="/" className="home1"> Ir a HOME</Link></>
       ) : (
-      <div>
-        <h2>Carrito</h2>
+      <>
+        <h1 className="tituloCarrito">Carrito</h1>
+        <div className="carrito">    
         {carrito.map(item => (
           <div key={item.id}>
-            <p>{item.title}</p>
+            <h3 className="tituloProd">{item.title}</h3>
+            <img src={item.imageUrl}/>
             <p>{item.cantidad} x $ {item.price}</p>
             <p>Subtotal: ${item.cantidad * item.price}</p>
             <button onClick={()=> borrarProd(item.id)}>Eliminar producto</button>
           </div>
         ))}
+        </div>
         <h3>Total Compra : ${calcularTotal()} </h3>
-        <button className='btn-comprar' onClick={vaciarCarrito}>Vaciar Carrito</button>
-      </div>
+        <button className='btnReset'>
+          <Link to="/">Seguir Comprando</Link>
+        </button>
+        <button className='btnRestar'>
+          <Link to="/">Terminar Compra</Link>
+        </button>
+        <button className='btn-comprar' onClick={vaciarCarrito}>Vaciar Carrito</button> 
+      </>
+      
       )
       }
     </>
