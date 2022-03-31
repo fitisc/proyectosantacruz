@@ -12,6 +12,7 @@ import "./estilos.css"
 
 
 
+
 ReactDOM.render(<App/>, document.getElementById('root')
 );
 
@@ -22,4 +23,4 @@ const carrito = [];
  const itemDetail = items[0];
 
  const carrito2 = [...carrito, itemDetail];
-  console.log(carrito2)
+  //console.log(carrito2)

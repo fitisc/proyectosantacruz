@@ -1,4 +1,6 @@
-import React from "react"
+import {db} from "./index"
+import { collection, setDoc, doc} from "firebase/firestone/lite"
+import { async } from "@firebase/util"
 
 const productos = [{
     "id": 1,
@@ -51,4 +53,17 @@ const productos = [{
     }
   ]
 
-  export default productos
+  async function dataFirebase() {
+      const miColeccion = collection(db, "productos")
+      productos.forEach((item) => {
+          
+          const newDoc = doc(miColeccion)
+
+          setDoc(newDoc, item).then(() => {
+              console.log("Document written with id: ", newDoc.id)
+              .catch(err =>{
+                  console.log("error adding document: ", err);
+              });
+          });
+      })
+  }

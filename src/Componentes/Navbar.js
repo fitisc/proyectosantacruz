@@ -4,11 +4,11 @@ import CardWidget from './CardWidget'
 
 const Navbar = () => {
 
-  //const {cantidad} = useContext(contexto)
 
   return (
 
     <nav className='nav'>
+                
                 <NavLink className='nav__link' to="/" >HOME</NavLink>
         
                 <NavLink className='nav__link' to="/category/Remeras" >REMERAS</NavLink>

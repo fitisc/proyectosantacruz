@@ -3,18 +3,8 @@ import productos from '../database/productos'
 import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import ItemDetail from './ItemDetail'
+import { getDatos } from '../FireBase/Index'
 
-function getDatos(idItem) {
-  return new Promise((resolve, reject) =>{
-    setTimeout(function(){
-      let itemNew = productos.find(function(itemIterado){
-        return (itemIterado.id === Number(idItem))
-      });
-      resolve(itemNew);
-    },500);
-  });
-}
-//let producto =
 
 const ItemDetailContainer = () => {
 

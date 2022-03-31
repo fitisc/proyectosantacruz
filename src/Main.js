@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import ItemListContainer from './Componentes/ItemListContainer'
 import ItemDetailContainer from './Componentes/ItemDetailContainer'
 import Carrito from './Componentes/Carrito'
-
+import TestContainer from './Componentes/TestContainer'
 
 const Main = (props) => {
   return( 
@@ -16,8 +16,7 @@ const Main = (props) => {
         <Route path='/category/:categoryid' element={<ItemListContainer/>}/>
         <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
         <Route path='/carrito' element={<Carrito/>}/>
-        
-        
+        <Route path='' element={<TestContainer/>}/>
       </Routes>
        
     </main>
