@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, query, where } from "firebase/firestore/lite";
+import { getFirestore, collection, getDocs, query, where, addDoc } from "firebase/firestore/lite";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -21,6 +21,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
+
 //obtener los items
 export async function getAllProductos(){
   //obtener ref a la coleccion
@@ -55,4 +56,11 @@ export async function getDatos(id){
   const resultDoc = await getDocs(myquery);
      return resultDoc.docs[0].data()
  
+}
+
+export async function sendBuyOrder(order){
+  const miColect = collection(db, "orders");
+  const orderDoc = await addDoc(miColect, order);
+  //return orderDoc()
+  console.log(orderDoc);
 }

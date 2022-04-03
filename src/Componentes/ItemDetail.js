@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react' 
 import ItemCount from "./ItemCount"
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { contexto } from "./Context/CartContext"
 
 const ItemDetail = ({item}) => {
-  const { addToCart, vaciarCarrito } = useContext(contexto);
+  const { addToCart } = useContext(contexto);
 
   const [cantidad, setCantidad] = useState(0)
   //let navigate = useNavigate();
@@ -21,7 +21,7 @@ const ItemDetail = ({item}) => {
     //console.log("Añadir a carrito", cantidad)
 
     
-    addToCart(item, cantidad);
+    //addToCart(item, cantidad);
   }
   
 

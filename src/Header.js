@@ -1,9 +1,6 @@
-import React, { useContext } from 'react'
-
-
+import React from 'react'
 
 const Header = () => {
-
   
   return (
     <header id='layouth-header' className=''>

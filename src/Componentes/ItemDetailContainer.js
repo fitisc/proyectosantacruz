@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import productos from '../database/productos'
+//import productos from '../database/productos'
 import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import ItemDetail from './ItemDetail'
@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
     const {idItem} = useParams()
     
     useEffect(() => {
-      //console.log(idItem)
+      
       getDatos(idItem)
         .then(respuestaPromise => setItem(respuestaPromise))
         //setItem(respuestaPromise)

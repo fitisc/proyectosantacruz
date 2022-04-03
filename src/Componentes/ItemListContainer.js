@@ -23,14 +23,15 @@ function ItemListContainer(props) {
     }else{
       getAllProductos()
       .then(respuestaPromise => setItems(respuestaPromise))
+      .catch((error) => {
+        toast.error("Error al cargar los productos...")
+      })
+       .finally(()=>{
+         setLoading(false)
+      })
     } 
     
-     //.catch((error) => {
-      // toast.error("Error al cargar los productos...")
-    // })
-     //.finally(()=>{
-       setLoading(false)
-    // })
+     
 
   }, [categoryid]);
 
