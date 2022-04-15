@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-//import productos from '../database/productos'
 import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import ItemDetail from './ItemDetail'
@@ -16,11 +15,11 @@ const ItemDetailContainer = () => {
       
       getDatos(idItem)
         .then(respuestaPromise => setItem(respuestaPromise))
-        //setItem(respuestaPromise)
-       .catch((error) => {
+        
+        .catch((error) => {
          toast.error("Error al cargar los productos...")
        })
-       .finally(()=>{
+        .finally(()=>{
          setLoading(false)
        })
   

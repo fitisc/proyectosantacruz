@@ -1,16 +1,12 @@
 import React, { createContext, useState } from 'react'
 
-
 export const contexto = createContext()
 
 const { Provider } = contexto
 
-
-
 const MiProvider = ({ children }) =>{
    const [carrito, SetCarrito] = useState([])
   
-
    const addToCart = (item, cantidad) => {
     const copiaCarrito = [...carrito];
     const itemAlCarrito = {...item, cantidad}

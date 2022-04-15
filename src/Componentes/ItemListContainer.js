@@ -3,11 +3,7 @@ import { toast } from 'react-toastify';
 import ItemList from './ItemList';
 import {useParams} from "react-router-dom"
 import { getAllProductos, getAllProductosFrom } from '../FireBase/Index';
-//import { db } from "./firebase"
-//import { collection, getDocs, query, where } from "firebase/firestore"
-
-
-
+import portada from '../assets/imgs/portada.png'
 
 
 function ItemListContainer(props) {
@@ -20,24 +16,22 @@ function ItemListContainer(props) {
     if(categoryid){
       getAllProductosFrom(categoryid)
       .then(respuestaPromise => setItems(respuestaPromise))
+      .finally(()=>{ setLoading(false)});
     }else{
       getAllProductos()
       .then(respuestaPromise => setItems(respuestaPromise))
-      .catch((error) => {
-        toast.error("Error al cargar los productos...")
-      })
-       .finally(()=>{
-         setLoading(false)
-      })
+      .catch((error) => { toast.error("Error al cargar los productos...")})
+       .finally(()=>{ setLoading(false)});
     } 
-    
-     
-
   }, [categoryid]);
 
   
     return ( 
     <>
+      <div><img src={portada} alt="portada" className='portada'  />
+      </div>
+      <h2 className='tituloCatalogo'>Catálogo de prendas</h2>
+     
       { loading ? <h1>Cargando...</h1> : <ItemList item={items} /> }
     </>
     )

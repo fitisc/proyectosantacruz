@@ -3,7 +3,7 @@ import TestItem from './TestItem'
 
 const TestList = ({usuarios, borrarUsuario}) => {
 
-    console.log("Render Lista")
+   // console.log("Render Lista")
     
   return (
     <div>

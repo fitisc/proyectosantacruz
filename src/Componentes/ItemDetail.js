@@ -28,23 +28,28 @@ const ItemDetail = ({item}) => {
   return (
     <div>
         <article className='articles2'>
-          <img src={item.imageUrl} />
+          
           <h2>{item.title}</h2>
+          <img src={item.imageUrl} alt="foto prenda"/>
+          <hr></hr>
           <h3> Precio: ${item.price}</h3>
-          <p>Descripción: "{item.description}"</p>
+          <h5>Descripción: "{item.description}"</h5>
           <h5>Categoria: {item.category}</h5>
           <h5>Stock disponible: {item.stock}</h5>
+          <hr></hr>
           { cantidad === 0 ? 
             <ItemCount initial={1} stock={item.stock} onAdd={onAdd} /> 
             : 
-            <button className='btn-comprar'>
-            <Link to="/carrito">Ir a Carrito</Link>
-            </button> 
+            <>
+              <button className='btn-comprar'>
+                <Link to="/carrito">Ir a Carrito</Link>
+              </button>
+              <button className='btnSeguirCompra'>
+                <Link to="/">Seguir Comprando</Link>
+              </button>
+            </>
           } 
-          
-          
-          
-          
+           
             
         </article>
     </div>

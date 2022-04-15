@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from "./Header"
+//import Header from "./Header"
 import Navbar from './Componentes/Navbar'
 import Main from './Main'
 import Footer from './Footer'
@@ -13,8 +13,7 @@ import MiProvider from './Componentes/Context/CartContext'
 const App = () => {
   return (
     <BrowserRouter>
-      <MiProvider>
-        
+      <MiProvider> 
         <Navbar />  
         <Main nombre= "HAPPY HIPPO" />
       </MiProvider>

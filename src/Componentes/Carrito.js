@@ -1,19 +1,19 @@
-import { collection, serverTimestamp, addDoc } from "firebase/firestore/lite"
-import {useContext} from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
 import {contexto} from "./Context/CartContext"
-import ItemList from "./Item"
-import { db, sendBuyOrder } from "../FireBase/Index"
+import { sendBuyOrder } from "../FireBase/Index"
 
  
 const Carrito = () => {
 
-  const {carrito, calcularTotal, vaciarCarrito, borrarProd } = useContext(contexto)
-
+  const {carrito, calcularTotal, vaciarCarrito, borrarProd } = useContext(contexto);
+  
+  const [orderId, setOrderId] = useState(false);
 
 const handleSubmit = () => {
   vaciarCarrito();
+  setOrderId(true);
 
   const orderData = {
      buyer: {
@@ -22,39 +22,61 @@ const handleSubmit = () => {
       email: "pedro@gmail.com"
     },
     items: [...carrito],
-    date: serverTimestamp(),
-    total: calcularTotal()
+    
+    total: calcularTotal(),
+    
   }
-  sendBuyOrder(orderData)
-  toast.success("¡Gracias por tu compra!")
+  sendBuyOrder(orderData).then( res => setOrderId(res))
+  toast.success("¡Gracias por tu compra! Su total es $ " + calcularTotal());
+  
 }
+
 
 
   return (
     <>
       {carrito.length === 0 ? (
-        <><h1 className="avisoCarrito">¡No tienes productos en el carrito!</h1>
-        <Link to="/" className="home1"> Ir a Catalogo</Link></>
-      ) : (
+        <>
+          <>{orderId ? 
+            <div>
+              <h1 className="avisoCarrito">¡Muchas gracias por tu compra!</h1>
+              <p>Tu ticket de compra es: <strong>{orderId}</strong></p>
+              <p>Su total es:${calcularTotal()}</p>
+             
+              <Link to="/" className="home1 btn-success"> Ir a Catalogo</Link>
+            </div>
+          :
+            <div>
+              <h1 className="avisoCarrito">¡No hay productos en el carrito!</h1>
+              <Link to="/" className="home1"> Ir a Catalogo</Link>
+            </div>
+            } 
+          </>
+        
+        </> )
+         : 
+         (
       <>
         <h1 className="tituloCarrito">Carrito</h1>
-        <div className="carrito">    
+        <div >    
         {carrito.map(item => (
-          <div key={item.id}>
+          <div className="carrito" key={item.id}>
             <h3 className="tituloProd">{item.title}</h3>
-            <img src={item.imageUrl}/>
+            <img src={item.imageUrl} alt="foto prenda"/>
             <p>{item.cantidad} x $ {item.price}</p>
             <p>Subtotal: ${item.cantidad * item.price}</p>
-            <button onClick={()=> borrarProd(item.id)}>Eliminar producto</button>
+            <button className="btn-detalle" onClick={()=> borrarProd(item.id)}>Eliminar producto</button>
           </div>
         ))}
         </div>
         <h3>Total Compra : ${calcularTotal()} </h3>
-        <button className='btnReset'>
+        <button className='btnSeguirCompra'>
           <Link to="/">Seguir Comprando</Link>
         </button>
-        <button className='btnRestar' onClick={handleSubmit} >Finalizar Compra</button>
-        <button className='btn-comprar' onClick={vaciarCarrito}>Vaciar Carrito</button> 
+        <br />
+        <button className='btnFinalCompra' onClick={handleSubmit} >Finalizar Compra</button>
+        <br />
+        <button className='btnVaciarCarro' onClick={vaciarCarrito}>Vaciar Carrito</button> 
       </>
       
       )

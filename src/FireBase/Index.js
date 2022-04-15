@@ -1,12 +1,7 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, query, where, addDoc } from "firebase/firestore/lite";
+import { getFirestore, collection, getDocs, query, where, addDoc, serverTimestamp } from "firebase/firestore/lite";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDP72iCFVjQkGHP0aLNYLZ73v8rZ1TH1jg",
   authDomain: "happyhippo-tienda.firebaseapp.com",
@@ -17,23 +12,17 @@ const firebaseConfig = {
   measurementId: "G-PE1GGW4KFR"
 };
 
-//Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
 
-//obtener los items
 export async function getAllProductos(){
-  //obtener ref a la coleccion
+
   const miColec = collection(db, "productos");
   const productSnap = await getDocs(miColec);
 
   return productSnap.docs.map(item => item.data())
-  //const result = productSnap.docs.map(item =>{
-   // return {...item.data(), id: item.id}
- // });
 
-  //return result;
 }
 
 export async function getAllProductosFrom(category){
@@ -47,7 +36,6 @@ export async function getAllProductosFrom(category){
   
 }
 
- //obtener un solo item
 export async function getDatos(id){
   const idN = Number(id);
   const miColec = collection(db, "productos");
@@ -60,7 +48,8 @@ export async function getDatos(id){
 
 export async function sendBuyOrder(order){
   const miColect = collection(db, "orders");
-  const orderDoc = await addDoc(miColect, order);
-  //return orderDoc()
-  console.log(orderDoc);
+  const orderFecha = {...order, timestamp: serverTimestamp()}
+  const orderDoc = await addDoc(miColect, orderFecha);
+  return (orderDoc.id);
+  
 }

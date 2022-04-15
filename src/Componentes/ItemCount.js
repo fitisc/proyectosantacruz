@@ -3,13 +3,9 @@ import {useState} from "react"
 
 const ItemCount = (props) => {
 
-  //const Contador = ({initial, stock}) => {
+ 
     let [cantidad, setCantidad] = useState(props.initial)
-  
-
-  
-//const [estado, setEstado] = useState(inicial)
-
+    
   const handelSumar = () => {
     if(cantidad < props.stock){
     setCantidad(cantidad + 1)
@@ -26,19 +22,19 @@ const ItemCount = (props) => {
     setCantidad(1)
   }
 
-  const onAdd = () => {
-    setCantidad(onAdd)
-    console.log("Agregar" + cantidad)
-  }
+  //const onAdd = () => {
+    //setCantidad(onAdd)
+    //console.log("Agregar" + cantidad)
+  //}
 
   return (
     <div>
-        <p>Mi contador va: {cantidad}</p>
+        <h5>Cantidad seleccionada: {cantidad}</h5>
       <button className="btnSumar" onClick={handelSumar} > + </button>
       <button className='btnReset' onClick={handelResetear}>RESET</button>
       <button className="btnRestar" onClick={handelRestar}> - </button><br />
-      <button className='btnAgregar' 
-        //disable={estado > stock || estado === 0} 
+      <button className='btnConfirmar' 
+        disable={cantidad || cantidad === 0} 
         onClick={()=>props.onAdd(cantidad)}>Confirmar compra
       </button>
       
