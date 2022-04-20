@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/49452fdc-8a4e-49aa-b791-3becf49419bc/deploy-status)](https://app.netlify.com/sites/fancy-manatee-1171c6/deploys)
+
 
 ### CODERHOUSE
 ##PROYECTO E-COMMERCE: CURSO REACT.JS 
