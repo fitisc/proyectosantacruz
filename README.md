@@ -8,7 +8,7 @@
 ![](/src/assets/imgs/logoHH.png)
 
 
-![DEMO](./src/assets/imgs/tiendahh.gif)
+![GIF](./src/assets/imgs/tiendahh.gif)
 
 ### SOBRE EL PROYECTO:
 ---
