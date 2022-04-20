@@ -38,9 +38,10 @@ git bash/git CMD (para guardar proyecto en git e ir commitiando los cambios real
 github (repositorio en la nube de github) Se realizan los push correspondientes en branch MASTER. 
 Branch MAIN solo tiene las primeras cargas del proyecto.
 
-git clone :[github](https://github.com/fitisc/proyectosantacruz.git)
+[github clone](https://github.com/fitisc/proyectosantacruz.git)
 
-Firebase:[firebase](https://console.firebase.google.com/u/0/project/happyhippo-tienda/firestore/data/~2Forders)
+
+[firebase](https://console.firebase.google.com/u/0/project/happyhippo-tienda/firestore/data/~2Forders)
 
 
 ``` 
