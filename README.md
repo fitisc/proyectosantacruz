@@ -1,13 +1,14 @@
 ### CODERHOUSE
-(poner site setting de netifly)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/49452fdc-8a4e-49aa-b791-3becf49419bc/deploy-status)](https://app.netlify.com/sites/fancy-manatee-1171c6/deploys)
 
 ##PROYECTO E-COMMERCE: CURSO REACT.JS 
+##Tienda HAPPY HIPPO: Ropa desde 0 a 10 años
 
 
 ![](/src/assets/imgs/logoHH.png)
-##Tienda HAPPY HIPPO: Ropa desde 0 a 10 años
 
-![](./src/assets/imgs/tiendaHH.gif)
+
+![DEMO](./src/assets/imgs/tiendahh.gif)
 
 ### SOBRE EL PROYECTO:
 ---
@@ -39,7 +40,13 @@ git bash/git CMD (para guardar proyecto en git e ir commitiando los cambios real
 github (repositorio en la nube de github) Se realizan los push correspondientes en branch MASTER. 
 Branch MAIN solo tiene las primeras cargas del proyecto.
 
-git clone http://github...
+git clone : https://github.com/fitisc/proyectosantacruz.git
+
+ Firebase: https://console.firebase.google.com/u/0/project/happyhippo-tienda/firestore/data/~2Forders
+
+
+
+
 ``` 
 #### Tecnologias utilizadas:
 
@@ -69,5 +76,5 @@ Se utiliza para guardar el proyecto en la nube
 * **NETIFLY**
 Se utiliza como hosting para hacer el deploy del proyecto.
 
- 
+
 
