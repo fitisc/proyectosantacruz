@@ -19,7 +19,7 @@ const Form = () => {
     toast.success("¡Tus datos fueron guardados exitosamente!");
    
   }
-  console.log(form);
+  
   return (
     <div>
         <form className='formUsuario'>
