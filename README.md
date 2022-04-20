@@ -23,9 +23,11 @@ El archivo CSS se encuentra también en la carpeta "src". Se confeccionó manual
 
 La paleta de colores utilizada se basa en los colores del logo de la marca.
 
-Se utilizan 2 carpetas de imagenes, una en public y otra en src, su ubicacion se tuvo en cuenta por la forma en que necesitan interactuar las imagnenes en el contenido.
+Se utilizan 2 carpetas de imagenes, una en public y otra en src, su ubicacion se tuvo en cuenta por la forma en que necesitan interactuar las imágenes en el contenido.
 
 Se guardan los datos de los productos y ordenes de compras en FIREBASE.
+
+Se puede ver el proyecto en los siguientes links:
 
 [Github clone](https://github.com/fitisc/proyectosantacruz.git)
 
