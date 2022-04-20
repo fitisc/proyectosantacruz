@@ -11,9 +11,11 @@ const Carrito = () => {
   
   const [orderId, setOrderId] = useState(false);
 
+
 const handleSubmit = () => {
   vaciarCarrito();
   setOrderId(true);
+  
 
   const orderData = {
      buyer: {
@@ -41,9 +43,9 @@ const handleSubmit = () => {
             <div>
               <h1 className="avisoCarrito">¡Muchas gracias por tu compra!</h1>
               <p>Tu ticket de compra es: <strong>{orderId}</strong></p>
-              <p>Su total es:${calcularTotal()}</p>
-             
-              <Link to="/" className="home1 btn-success"> Ir a Catalogo</Link>
+              
+
+              <Link to="/" className="home1"> Volver a Catalogo</Link>
             </div>
           :
             <div>

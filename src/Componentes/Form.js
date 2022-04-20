@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const Form = () => {
@@ -9,12 +10,16 @@ const Form = () => {
          return setForm({ ...form, [e.target.name]: e.target.value });
 
         }
-        const handleEnviar = () => {
-          // setForm({ nombre: "", email: "", password: "" });
-          console.log(form);
-         toast.success("¡Tus datos fueron guardados exitosamente!");
-        }
+        const handleEnviar = (e) => {
+         setTimeout(() => {
+       
+    }
 
+    , 3000);
+    toast.success("¡Tus datos fueron guardados exitosamente!");
+   
+  }
+  console.log(form);
   return (
     <div>
         <form className='formUsuario'>
@@ -34,6 +39,7 @@ const Form = () => {
             name='password' type="password" placeholder="Password" onChange={handleChange} /><br/>
             <button className='btn-Enviar' type="submit" onClick={handleEnviar}>Enviar</button>
         </form>
+        <Link to="/" className="home1"> Ir a Catalogo</Link>
     </div>
   )
 }

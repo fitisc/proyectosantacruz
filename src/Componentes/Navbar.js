@@ -25,7 +25,7 @@ const Navbar = () => {
         <NavLink className='nav__link' to="/category/Buzos-Camperas">BUZOS/CAMPERAS</NavLink>
         <CardWidget /> 
 
-        <NavLink className='nav__link' to="/test">Login</NavLink>
+        <NavLink className='nav__link' to="/test">Registrarse</NavLink>
      
         
       </nav>

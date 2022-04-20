@@ -1,27 +1,73 @@
+### CODERHOUSE
 (poner site setting de netifly)
-#PROYECTO FINAL: CURSO REACT.JS
+
+##PROYECTO E-COMMERCE: CURSO REACT.JS 
+
+
+![](/src/assets/imgs/logoHH.png)
 ##Tienda HAPPY HIPPO: Ropa desde 0 a 10 años
 
-descripcion del proyecto: tecnico y sobre el codigo y proyecto. mi proyecto es un ecommerce...
+![](./src/assets/imgs/tiendaHH.gif)
 
-pasos e instalacion y uso del proyecto: ...deploy de netifly
+### SOBRE EL PROYECTO:
+---
+Mi proyecto se basa en un e-commerce de una tienda de ropa infantil de 0 a 10 años. 
+Se utiliza React 17.0.2 para la creación del mismo.
 
+ La organización del código se basó en la metodologia que utiliza REACT para estructurar los componentes presentacionales y contenedores generando un contexto determinado para su funcionamiento dinámico. 
+Los archivos estáticos (html, logos, img,etc) se encuentran ubicados en la carpeta "public". Mientras que los archivos dinámicos que tienen formato js(react) están ubicados dentro de la carpeta "src" del proyecto.
+
+El archivo CSS se encuentra también en la carpeta "src". Se confeccionó manualmente sin utilizar librerias externas. Contiene todos los estilos utilizados con clases o etiquetas en el código ordenado teniendo en cuenta los "contenedores/contenidos en" y por su funcionalidad ( por ejemplo: todos los botones estan al final, uno seguido del otro, después de todas las estructuras de la página, o los estilos de los artículos y productos).
+
+La paleta de colores utilizada se basa en los colores del logo de la marca.
+
+Se utilizan 2 carpetas de imagenes, una en public y otra en src, su ubicacion se tuvo en cuenta por la forma en que necesitan interactuar las imagnenes en el contenido.
+
+Se guardan los datos de los productos y ordenes de compras en FIREBASE.
+
+###DEMO:
+
+
+
+### Pasos de instalacion de Create React App:
 ```
-git clone http://github...
-cd mirepo
-npm install
+En CMD:
+cd curso react/proyectosantacruz
+npm install create react app
 npm start
-```
+git bash/git CMD (para guardar proyecto en git e ir commitiando los cambios realizados)
+github (repositorio en la nube de github) Se realizan los push correspondientes en branch MASTER. 
+Branch MAIN solo tiene las primeras cargas del proyecto.
 
-tecnologias usadas (dependencias de json) explicacion de donde se uso y para que
+git clone http://github...
+``` 
+#### Tecnologias utilizadas:
 
-* "firebase": "^9.6.10": se utiliza esta base de datos para guardar los productos de la tienda y las ordenes de compra de los usuarios.
-* "react": "^17.0.2",
-* "react-dom": "^17.0.2",
-* "react-router-dom": "^6.2.2",
-* "react-scripts": "5.0.0",
-* "react-toastify": "^8.2.0": se instaló para que el usuario tenga una notificacion sobre el resultado de sus elecciones sobre la compra.
-* "web-vitals": "^2.1.4"
+* **"React": "^17.0.2"**,
+* **"React-dom": "^17.0.2"**
+Es el framework de Javascript utilizado y aprendido en el curso para la creacion de una aplicacion e-commerce.
 
++ **"Firebase": "^9.6.10"**
+ Se utiliza como base de datos para guardar los productos de la tienda y las ordenes de compra de los usuarios.
 
-descripcion de nosotros: soy tal, me dedico a ,,, hice ste proecto para... redes sociales...
+* **"React-router-dom": "^6.2.2"**
+Libreria que se ituliza para facilitar la navegacion de la pagina.
+
++  **"React-toastify": "^8.2.0"**
+ se instaló para que el usuario tenga una notificacion sobre el resultado de sus elecciones sobre la compra.
+
+*  **"React-scripts": "5.0.0"**,
++  **"web-vitals": "^2.1.4"** 
+Son dependecias propias de React.
+
+* **"ESLint v2.2.2 y Prettier ESLint v3.1.0"**
+Se utiliza para asegurarse de utilizar en el codigo buenas costumbres y que esté prolijo para su lectura e interpretación.
+
++ **GITHUB**
+Se utiliza para guardar el proyecto en la nube
+
+* **NETIFLY**
+Se utiliza como hosting para hacer el deploy del proyecto.
+
+ 
+

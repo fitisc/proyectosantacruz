@@ -22,10 +22,7 @@ const ItemCount = (props) => {
     setCantidad(1)
   }
 
-  //const onAdd = () => {
-    //setCantidad(onAdd)
-    //console.log("Agregar" + cantidad)
-  //}
+  
 
   return (
     <div>

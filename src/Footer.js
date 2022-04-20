@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Componentes/Navbar'
+
 
 const Footer = () => {
   return (
@@ -7,6 +7,7 @@ const Footer = () => {
     <footer className='footer'>
       
       <p>Copyright 2022</p>
+      <p>Ma. de Fátima Santa Cruz</p>
       <p>Todos los derechos reservados</p>
         
     </footer>
