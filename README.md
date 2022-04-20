@@ -1,13 +1,14 @@
-### CODERHOUSE
 [![Netlify Status](https://api.netlify.com/api/v1/badges/49452fdc-8a4e-49aa-b791-3becf49419bc/deploy-status)](https://app.netlify.com/sites/fancy-manatee-1171c6/deploys)
 
-##PROYECTO E-COMMERCE: CURSO REACT.JS 
-##Tienda HAPPY HIPPO: Ropa desde 0 a 10 años
+### CODERHOUSE
+## PROYECTO E-COMMERCE: CURSO REACT.JS 
+
+## Tienda HAPPY HIPPO: Ropa desde 0 a 10 años
 
 
 ![](/src/assets/imgs/logoHH.png)
 
-
+### Presentacion de proyecto:
 ![GIF](./src/assets/imgs/tiendahh.gif)
 
 ### SOBRE EL PROYECTO:
@@ -26,9 +27,6 @@ Se utilizan 2 carpetas de imagenes, una en public y otra en src, su ubicacion se
 
 Se guardan los datos de los productos y ordenes de compras en FIREBASE.
 
-###DEMO:
-
-
 
 ### Pasos de instalacion de Create React App:
 ```
@@ -42,13 +40,11 @@ Branch MAIN solo tiene las primeras cargas del proyecto.
 
 git clone : https://github.com/fitisc/proyectosantacruz.git
 
- Firebase: https://console.firebase.google.com/u/0/project/happyhippo-tienda/firestore/data/~2Forders
-
-
+Firebase: https://console.firebase.google.com/u/0/project/happyhippo-tienda/firestore/data/~2Forders
 
 
 ``` 
-#### Tecnologias utilizadas:
+### Tecnologias utilizadas:
 
 * **"React": "^17.0.2"**,
 * **"React-dom": "^17.0.2"**
