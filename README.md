@@ -27,6 +27,11 @@ Se utilizan 2 carpetas de imagenes, una en public y otra en src, su ubicacion se
 
 Se guardan los datos de los productos y ordenes de compras en FIREBASE.
 
+[Github clone](https://github.com/fitisc/proyectosantacruz.git)
+
+[Firebase](https://console.firebase.google.com/u/0/project/happyhippo-tienda/firestore/data/~2Forders)
+
+[DEMO](https://fancy-manatee-1171c6.netlify.app)
 
 ### Pasos de instalacion de Create React App:
 ```
@@ -38,10 +43,6 @@ git bash/git CMD (para guardar proyecto en git e ir commitiando los cambios real
 github (repositorio en la nube de github) Se realizan los push correspondientes en branch MASTER. 
 Branch MAIN solo tiene las primeras cargas del proyecto.
 
-[github clone](https://github.com/fitisc/proyectosantacruz.git)
-
-
-[firebase](https://console.firebase.google.com/u/0/project/happyhippo-tienda/firestore/data/~2Forders)
 
 
 ``` 
